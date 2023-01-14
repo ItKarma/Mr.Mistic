@@ -1,0 +1,24 @@
+{
+  "name": "mr.mistic",
+  "version": "1.0.0",
+  "description": "bot assistent for your group",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danzok/Mr.Mistic.git"
+  },
+  "keywords": [
+    "bot-telegram",
+    "assistent-dev",
+    "assistent-danzok"
+  ],
+  "author": "danzok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danzok/Mr.Mistic/issues"
+  },
+  "homepage": "https://github.com/danzok/Mr.Mistic#readme"
+}
