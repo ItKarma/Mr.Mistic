@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/danzok/Mr.Mistic/issues"
   },
-  "homepage": "https://github.com/danzok/Mr.Mistic#readme"
+  "homepage": "https://github.com/danzok/Mr.Mistic#readme",
+  "dependencies": {
+    "grammy": "^1.13.0"
+  }
 }
