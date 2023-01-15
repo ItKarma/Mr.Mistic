@@ -1,5 +1,6 @@
 import { Bot, InlineKeyboard } from 'grammy';
 import 'dotenv/config';
+import axios from 'axios';
 
 const bot = new Bot(String(process.env.TOKEN_BOT));
 
@@ -14,11 +15,6 @@ bot.command("start", async (ctx) => {
         { caption: `Hi @${user}`, reply_markup: inlineKeyboard });
 });
 
-bot.command("node", async (ctx) => {
-    let text = ctx.update.message?.text;
-    let query = text?.slice(5);
-
-});
 
 bot.command("reply", async (ctx) => {
     let text = ctx.update.message?.text;
@@ -28,5 +24,25 @@ bot.command("reply", async (ctx) => {
 
     await ctx.reply(`_Exemplo de uso do comando_ :  */reply example*`, { parse_mode: "MarkdownV2" });
 });
+
+bot.command('ban', async (ctx) =>{
+
+ let userBanned = ctx.update.message?.reply_to_message?.from?.id;
+
+ ctx.banChatMember(Number(userBanned))
+});
+
+bot.on('message', async (ctx) => {
+    let usersJoineds = ctx.update.message.new_chat_members
+    let userslefts = ctx.update.message.left_chat_member?.first_name
+
+    if(userslefts){
+        ctx.reply(`Adeus ${userslefts}`)
+    }
+
+    if(usersJoineds){
+        ctx.reply(`Bem vindo @${usersJoineds[0].first_name}`)
+    }
+})
 
 bot.start();

@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/danzok/Mr.Mistic#readme",
   "dependencies": {
+    "axios": "^1.2.2",
     "dotenv": "^16.0.3",
     "grammy": "^1.13.0"
   },
   "devDependencies": {
+    "@types/node": "^18.11.18",
     "ts-node-dev": "^2.0.0"
   }
 }
