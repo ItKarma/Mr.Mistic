@@ -29,7 +29,12 @@ bot.command('ban', async (ctx) =>{
 
  let userBanned = ctx.update.message?.reply_to_message?.from?.id;
 
- ctx.banChatMember(Number(userBanned))
+ ctx.banChatMember(Number(userBanned)).then((data)=>{
+    ctx.reply('Banido' +data);
+ }).catch((err)=>{
+    ctx.reply(`um sou adm :( 
+    error : ${err}`)
+ })
 });
 
 bot.on('message', async (ctx) => {
